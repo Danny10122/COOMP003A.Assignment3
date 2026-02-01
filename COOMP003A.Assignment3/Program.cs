@@ -17,18 +17,36 @@
             double num1 = double.Parse(year);
             double num2 = double.Parse(birth);
 
-            double sum = num1 - num2;
+            double age = num1 - num2;
 
-            Console.Write("\nCalculated Age: " + sum);
+            Console.Write("\nCalculated Age: " + age);
             Console.Write("\nReadiness Category: ");
-            if (sum >= 18)
+            if (age >= 18)
             {
                 Console.WriteLine("Adult");
             }
 
             Console.Write("\nDo you have a valid ID? (yes/no): ");
+            string input = Console.ReadLine();
+            bool isValid = true;
+
+            Console.Write("Have you completed orientation? (yes/no): ");
+            string inputt = Console.ReadLine();
+            bool isCompleted = false;
 
             Console.Write("\nReadiness Status: ");
+            if (isValid && isCompleted)
+            {
+                Console.WriteLine("Ready");
+            }
+            else if (isValid || isCompleted)
+            {
+                Console.WriteLine("Conditionally Ready");
+            }
+            else
+            {
+                Console.WriteLine("Not Ready");
+            }
 
             Console.WriteLine("\nSelect a guidance option:");
 
@@ -39,9 +57,18 @@
             Console.WriteLine("3 - Career Planning");
 
             Console.Write("Enter choice: ");
+            int choice = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("\nGuidance:");
-            Console.WriteLine("Meet with an academic advisor to plan your next term.");
+            if (choice == 1)
+            {
+                Console.WriteLine("\nGuidance:");
+                Console.WriteLine("Meet with an academic advisor to plan your next term.");
+            }
+            if (choice == 2)
+            {
+                Console.WriteLine("\nGuidance:");
+                Console.WriteLine("Good luck lil bro");
+            }
         }
     }
 }
