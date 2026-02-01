@@ -7,12 +7,24 @@
             Console.WriteLine("=== Academic & Personal Readiness Evalutor ===");
 
             Console.Write("\nCurrent Year: ");
+            string year = Console.ReadLine();
 
-            Console.Write("Enter your birth year: ");
+            Console.Write("Enter your birth year: ");          
+            string birth = Console.ReadLine();
+            
 
-            Console.Write("\nCalculated Age: ");
+            //For calculated age
+            double num1 = double.Parse(year);
+            double num2 = double.Parse(birth);
 
-            Console.Write("Readiness Category");
+            double sum = num1 - num2;
+
+            Console.Write("\nCalculated Age: " + sum);
+            Console.Write("\nReadiness Category: ");
+            if (sum >= 18)
+            {
+                Console.WriteLine("Adult");
+            }
 
             Console.Write("\nDo you have a valid ID? (yes/no): ");
 
