@@ -4,11 +4,14 @@
     {
         static void Main(string[] args)
         {
+            //Title
             Console.WriteLine("=== Academic & Personal Readiness Evalutor ===");
-
+            
+            //For current year
             Console.Write("\nCurrent Year: ");
             string year = Console.ReadLine();
 
+            //For birth year
             Console.Write("Enter your birth year: ");          
             string birth = Console.ReadLine();
             
@@ -19,13 +22,19 @@
 
             double age = num1 - num2;
 
+            //For age
             Console.Write("\nCalculated Age: " + age);
             Console.Write("\nReadiness Category: ");
             if (age >= 18)
             {
                 Console.WriteLine("Adult");
             }
-
+            else 
+            {
+                Console.WriteLine("Not an adult");
+            }
+            
+            //For ID and orientation
             Console.Write("\nDo you have a valid ID? (yes/no): ");
             string input = Console.ReadLine();
             bool isValid = true;
@@ -34,6 +43,7 @@
             string inputt = Console.ReadLine();
             bool isCompleted = false;
 
+            //For status
             Console.Write("\nReadiness Status: ");
             if (isValid && isCompleted)
             {
@@ -48,6 +58,7 @@
                 Console.WriteLine("Not Ready");
             }
 
+            //For selecting an option
             Console.WriteLine("\nSelect a guidance option:");
 
             Console.WriteLine("1 - Academic Planning");
@@ -59,6 +70,7 @@
             Console.Write("Enter choice: ");
             int choice = int.Parse(Console.ReadLine());
 
+            //For the choices
             if (choice == 1)
             {
                 Console.WriteLine("\nGuidance:");
@@ -67,7 +79,12 @@
             if (choice == 2)
             {
                 Console.WriteLine("\nGuidance:");
-                Console.WriteLine("Good luck lil bro");
+                Console.WriteLine("Good luck lil bro.");
+            }
+            if (choice == 3)
+            {
+                Console.WriteLine("\nGuidance:");
+                Console.WriteLine("Make sure you enjoy what you're doing before it's late.");
             }
         }
     }
