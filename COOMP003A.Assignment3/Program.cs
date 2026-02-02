@@ -76,15 +76,19 @@
                 Console.WriteLine("\nGuidance:");
                 Console.WriteLine("Meet with an academic advisor to plan your next term.");
             }
-            if (choice == 2)
+            else if (choice == 2)
             {
                 Console.WriteLine("\nGuidance:");
                 Console.WriteLine("Good luck lil bro.");
             }
-            if (choice == 3)
+            else if (choice == 3)
             {
                 Console.WriteLine("\nGuidance:");
                 Console.WriteLine("Make sure you enjoy what you're doing before it's late.");
+            }
+            else
+            {
+                Console.WriteLine("\nNot an option");
             }
         }
     }
